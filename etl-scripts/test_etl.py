@@ -1,10 +1,12 @@
 import pandas as pd
 import numpy as np
+import xrpl
 
-# Example: Creating a simple DataFrame
-data = {
-    'Wallet Address': ['rKtd3FXaE9rcQh5WLy6GGXFUCze5XtA6vS'],
-    'Balance': [10000]
-}
-df = pd.DataFrame(data)
-print(df)
+
+
+ #Define the network client
+from xrpl.clients import JsonRpcClient
+JSON_RPC_URL = "https://s2.ripple.com:51234/"
+client = JsonRpcClient(JSON_RPC_URL)
+
+
